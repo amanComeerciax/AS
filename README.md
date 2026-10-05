@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wedding Invitation Website
+
+A stunning, production-ready wedding invitation website built with Next.js 15, Tailwind CSS v4, GSAP + ScrollTrigger, and Lenis smooth scrolling.
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
 
-```bash
+2. Run the development server:
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Customize
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Edit the Content
+All text content, dates, and settings are managed in one central config file.
+Open `data/wedding.ts` and replace the placeholder text with your real details. This includes:
+- Couple names and bios
+- Wedding date (used for the countdown timer)
+- Event details (time, venue, map links, dress code)
+- Love story timeline milestones
+- RSVP WhatsApp number
+- Image and music paths
 
-## Learn More
+### 2. Replace Images & Music
+All media assets live in the `public/` directory.
 
-To learn more about Next.js, take a look at the following resources:
+**Images (`public/images/`):**
+Replace the placeholder images with your actual photos. Ensure the filenames match those listed in `data/wedding.ts` or update the paths in the config file.
+- `hero-bg.jpg` - Background for the first section
+- `bride.jpg` - Bride's portrait
+- `groom.jpg` - Groom's portrait
+- `gallery-1.jpg` to `gallery-6.jpg` - Photos for the gallery section
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Music (`public/audio/`):**
+Replace `public/audio/background-music.mp3` with your desired background track. The music will play automatically after the user clicks the "Tap to Open" envelope.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Change Colors & Fonts
+To change the color scheme or fonts, edit the variables defined in `app/globals.css` and `app/layout.tsx`.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to a GitHub repository.
+2. Sign up/Log in to Vercel and create a new project.
+3. Import your GitHub repository.
+4. Leave all settings as default and click "Deploy".
+5. Your stunning wedding website will be live in minutes!
