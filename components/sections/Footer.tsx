@@ -13,10 +13,10 @@ export function Footer() {
         
         {/* Left Side: Names & Date */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <div className="w-16 h-16 rounded-full border border-gold/60 flex items-center justify-center mb-5 text-gold font-script text-xl relative">
-             <span className="opacity-90">{weddingData.couple.groom.firstName[0]}</span>
+          <div className="w-16 h-16 rounded-full border border-gold/60 flex items-center justify-center mb-5 text-gold font-script text-xl relative tracking-widest">
+             <span className="opacity-90 mt-1">A</span>
              <div className="w-[1px] h-5 bg-gold/50 mx-2" />
-             <span className="opacity-90">{weddingData.couple.bride.firstName[0]}</span>
+             <span className="opacity-90 mt-1">S</span>
              <div className="absolute inset-1 border border-gold/30 rounded-full" />
           </div>
           <h3 className="font-script text-[1.6rem] text-gold mb-2 tracking-wide">

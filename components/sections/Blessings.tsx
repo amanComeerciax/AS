@@ -60,10 +60,10 @@ export function Blessings() {
         </h2>
 
         {/* Parents Section */}
-        <div className="blessing-elem w-full flex flex-row items-center justify-center gap-8 md:gap-16 px-4 md:px-12 mb-8">
+        <div className="blessing-elem w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 px-4 md:px-12 mb-8">
           
-          <div className="flex flex-col items-end text-right flex-1">
-            <span className="font-heading text-xs md:text-sm text-maroon font-bold uppercase tracking-wider mb-1">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right flex-1">
+            <span className="font-heading text-[11px] md:text-sm text-maroon font-bold uppercase tracking-wider mb-1">
               {weddingData.couple.groom.father}
             </span>
             <span className="font-heading text-[10px] md:text-xs text-maroon/80 font-bold uppercase tracking-wider">
@@ -71,16 +71,16 @@ export function Blessings() {
             </span>
           </div>
 
-          <div className="flex items-center justify-center text-gold opacity-80 shrink-0">
-            <div className="w-8 md:w-16 h-px bg-gold/40" />
-            <div className="mx-3 w-3 h-3 md:w-4 md:h-4 border border-gold rotate-45 flex items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center text-gold opacity-80 shrink-0">
+            <div className="w-px h-8 md:w-16 md:h-px bg-gold/40" />
+            <div className="my-3 md:my-0 mx-0 md:mx-3 w-3 h-3 md:w-4 md:h-4 border border-gold rotate-45 flex items-center justify-center">
                <div className="w-1 h-1 bg-gold" />
             </div>
-            <div className="w-8 md:w-16 h-px bg-gold/40" />
+            <div className="w-px h-8 md:w-16 md:h-px bg-gold/40" />
           </div>
 
-          <div className="flex flex-col items-start text-left flex-1">
-            <span className="font-heading text-xs md:text-sm text-maroon font-bold uppercase tracking-wider mb-1">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1">
+            <span className="font-heading text-[11px] md:text-sm text-maroon font-bold uppercase tracking-wider mb-1">
               {weddingData.couple.bride.father}
             </span>
             <span className="font-heading text-[10px] md:text-xs text-maroon/80 font-bold uppercase tracking-wider">

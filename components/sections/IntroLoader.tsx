@@ -141,8 +141,8 @@ export function IntroLoader() {
           <div className="absolute inset-1 border border-maroon/20 rounded-full" />
           <span className="font-heading text-xs tracking-[0.3em] font-bold mt-2">OPEN</span>
           <div className="w-10 h-px bg-maroon/40 my-1" />
-          <span className="font-script text-3xl leading-none font-bold">
-            {weddingData.couple.groom.firstName[0]}&{weddingData.couple.bride.firstName[0]}
+          <span className="font-script text-[1.6rem] leading-none font-bold tracking-widest mt-1">
+            A S
           </span>
         </button>
       </div>
