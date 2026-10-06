@@ -18,7 +18,7 @@
   --font-script: var(--font-script);
   --font-heading: var(--font-script);
   --font-body: var(--font-script);
-  --font-cursive: var(--font-script);
+  --font-cursive: var(--font-cursive);
 
   --animate-fade-in: fadeIn 1s ease-in-out;
   --animate-float: float 6s ease-in-out infinite;
@@ -29,6 +29,16 @@
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+  @keyframes petalFall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+  @keyframes petalSway {
+    0% { margin-left: -30px; }
+    100% { margin-left: 30px; }
   }
   @keyframes float {
     0% { transform: translateY(0px); }
@@ -47,6 +57,13 @@
     0%, 100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
     50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 40px rgba(212, 175, 55, 0.2); }
   }
+}
+
+.animate-petal-fall {
+  animation: petalFall 15s linear infinite;
+}
+.animate-petal-sway {
+  animation: petalSway 3s ease-in-out infinite alternate;
 }
 
 :root {

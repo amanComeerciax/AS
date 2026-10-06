@@ -15,13 +15,14 @@ export function Gallery() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".gallery-img",
-        { scale: 0.9, opacity: 0 },
+        { y: 80, scale: 0.8, opacity: 0 },
         {
+          y: 0,
           scale: 1,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power2.out",
+          duration: 1,
+          stagger: { each: 0.1, from: "center" },
+          ease: "back.out(1.5)",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 70%",

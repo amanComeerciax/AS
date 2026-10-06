@@ -15,13 +15,14 @@ export function VenueMap() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".map-elem",
-        { y: 30, opacity: 0 },
+        { scale: 0.8, opacity: 0, rotationX: -20 },
         {
-          y: 0,
+          scale: 1,
           opacity: 1,
-          duration: 1,
+          rotationX: 0,
+          duration: 1.5,
           stagger: 0.2,
-          ease: "power2.out",
+          ease: "expo.out",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",

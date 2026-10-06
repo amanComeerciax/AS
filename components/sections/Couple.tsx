@@ -15,13 +15,14 @@ export function Couple() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".couple-elem",
-        { y: 50, opacity: 0 },
+        { y: 60, opacity: 0, rotationX: 15 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
+          rotationX: 0,
+          duration: 1.2,
           stagger: 0.2,
-          ease: "power2.out",
+          ease: "back.out(1.2)",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 75%",

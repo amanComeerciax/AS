@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { FallingFlowers } from "@/components/ui/FallingFlowers";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,6 +51,7 @@ export default function RootLayout({
       className={`${scriptFont.variable} ${headingFont.variable} ${bodyFont.variable} ${cursiveFont.variable} antialiased`}
     >
       <body className="min-h-[100dvh] flex flex-col bg-ivory text-charcoal">
+        <FallingFlowers />
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

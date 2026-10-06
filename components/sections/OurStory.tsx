@@ -36,15 +36,17 @@ export function OurStory() {
       gsap.utils.toArray(".story-card").forEach((card: any, i) => {
         gsap.fromTo(
           card,
-          { opacity: 0, x: i % 2 === 0 ? -50 : 50 },
+          { opacity: 0, x: i % 2 === 0 ? -80 : 80, rotation: i % 2 === 0 ? -5 : 5, scale: 0.9 },
           {
             opacity: 1,
             x: 0,
-            duration: 1,
-            ease: "power2.out",
+            rotation: 0,
+            scale: 1,
+            duration: 1.2,
+            ease: "back.out(1.2)",
             scrollTrigger: {
               trigger: card,
-              start: "top 80%",
+              start: "top 85%",
             },
           }
         );

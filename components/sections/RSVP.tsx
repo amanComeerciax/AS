@@ -1,14 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { weddingData } from "@/data/wedding";
+import gsap from "gsap";
 
 export function RSVP() {
+  const sectionRef = useRef<HTMLElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     guests: "1",
     message: "",
   });
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".rsvp-elem",
+        { y: 60, opacity: 0, rotationX: -20 },
+        {
+          y: 0,
+          opacity: 1,
+          rotationX: 0,
+          duration: 1.2,
+          stagger: 0.2,
+          ease: "back.out(1.2)",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +42,7 @@ export function RSVP() {
   };
 
   return (
-    <section id="rsvp" className="relative py-32 bg-maroon overflow-hidden border-t-2 border-gold/30">
+    <section ref={sectionRef} id="rsvp" className="relative py-32 bg-maroon overflow-hidden border-t-2 border-gold/30">
       {/* Background Image provided by user */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
@@ -27,7 +51,7 @@ export function RSVP() {
 
       <div className="relative z-10 container mx-auto px-6 max-w-2xl">
         
-        <div className="flex flex-col items-center mb-12 text-center">
+        <div className="rsvp-elem flex flex-col items-center mb-12 text-center">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-[1px] bg-gold" />
             <h2 className="font-cursive text-5xl md:text-6xl text-maroon">
@@ -43,7 +67,7 @@ export function RSVP() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full max-w-lg mx-auto">
+        <form onSubmit={handleSubmit} className="rsvp-elem flex flex-col gap-6 w-full max-w-lg mx-auto">
           <div className="flex flex-col md:flex-row gap-6">
             <input
               type="text"

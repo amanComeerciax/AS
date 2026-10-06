@@ -25,13 +25,15 @@ export function Events() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".event-card",
-        { y: 50, opacity: 0 },
+        { y: 100, opacity: 0, rotationZ: -5, scale: 0.9 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          rotationZ: 0,
+          scale: 1,
+          duration: 1.2,
           stagger: 0.2,
-          ease: "power3.out",
+          ease: "elastic.out(1, 0.7)",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 75%",

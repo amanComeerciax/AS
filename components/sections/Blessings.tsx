@@ -16,16 +16,17 @@ export function Blessings() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".blessing-elem",
-        { y: 40, opacity: 0 },
+        { y: 50, opacity: 0, scale: 0.95 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
+          scale: 1,
+          duration: 1.2,
           stagger: 0.15,
           ease: "power3.out",
           scrollTrigger: {
             trigger: contentRef.current,
-            start: "top 85%",
+            start: "top 80%",
           },
         }
       );

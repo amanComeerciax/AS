@@ -3,15 +3,15 @@ export const weddingData = {
     bride: {
       firstName: "Shifa",
       lastName: "",
-      father: "Mr. Bride's Father",
-      mother: "Mrs. Bride's Mother",
+      father: "Harun Latif Bhai Memon",
+      mother: "Sahenaz Harun Bhai Memon",
       bio: "A free spirit who loves to travel and explore new cultures. Shifa found her perfect match in Amaan's calm and steady nature."
     },
     groom: {
       firstName: "Mohammad Amaan",
       lastName: "",
-      father: "Mr. Groom's Father",
-      mother: "Mrs. Groom's Mother",
+      father: "Irfan Ibrahim Bhai Memon",
+      mother: "Sahenaz Irfan Bhai Memon",
       bio: "An introverted software engineer who loves cooking and reading. Amaan's world lit up when he met Shifa."
     }
   },

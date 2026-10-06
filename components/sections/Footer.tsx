@@ -8,51 +8,49 @@ export function Footer() {
   const weddingDate = new Date(weddingData.date);
 
   return (
-    <footer className="bg-[#1A1816] text-ivory py-16 border-t-4 border-maroon">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+    <footer className="bg-[#1a1412] text-ivory py-12 border-t-[3px] border-maroon relative z-10">
+      <div className="container mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Side: Names & Date */}
-        <div className="flex flex-col items-center md:items-start">
-          <div className="w-16 h-16 rounded-full border border-gold/40 flex items-center justify-center mb-6 text-gold font-script text-2xl relative">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="w-16 h-16 rounded-full border border-gold/60 flex items-center justify-center mb-5 text-gold font-script text-xl relative">
              <span className="opacity-90">{weddingData.couple.groom.firstName[0]}</span>
-             <div className="w-[1px] h-6 bg-gold/30 mx-2" />
+             <div className="w-[1px] h-5 bg-gold/50 mx-2" />
              <span className="opacity-90">{weddingData.couple.bride.firstName[0]}</span>
-             {/* Fake Wreath Decoration */}
-             <div className="absolute inset-1 border border-gold/20 rounded-full" />
-             <div className="absolute -inset-2 border border-gold/10 rounded-full border-dashed" />
+             <div className="absolute inset-1 border border-gold/30 rounded-full" />
           </div>
-          <h3 className="font-script text-3xl text-gold mb-2">
+          <h3 className="font-script text-[1.6rem] text-gold mb-2 tracking-wide">
             {weddingData.couple.groom.firstName} & {weddingData.couple.bride.firstName}
           </h3>
-          <p className="font-heading text-xs tracking-[0.3em] uppercase text-ivory/60">
+          <p className="font-heading text-[10px] tracking-[0.3em] uppercase text-ivory/60">
             {format(weddingDate, "dd MMMM yyyy")}
           </p>
         </div>
 
         {/* Center: Thank you */}
-        <div className="flex flex-col items-center text-center max-w-sm">
-          <h4 className="font-cursive text-4xl text-gold mb-4">Thank You</h4>
-          <p className="font-body text-xs text-ivory/50 leading-relaxed mb-4">
+        <div className="flex flex-col items-center text-center max-w-md">
+          <h4 className="font-cursive text-5xl md:text-[3.5rem] text-gold mb-4 leading-none">Thank You</h4>
+          <p className="font-body text-[10px] md:text-xs text-ivory/50 leading-relaxed mb-4 tracking-wider">
             Your presence will make our day even more special.
             <br />
             JazakAllah Khair.
           </p>
-          <div className="flex items-center justify-center text-gold">
-            <div className="w-8 h-px bg-gold/30" />
-            <div className="w-1 h-1 bg-gold rounded-full mx-3 opacity-50" />
-            <div className="w-8 h-px bg-gold/30" />
+          <div className="flex items-center justify-center text-gold/40">
+            <div className="w-12 h-px bg-gold/40" />
+            <div className="w-1 h-1 bg-gold/40 rotate-45 mx-3" />
+            <div className="w-12 h-px bg-gold/40" />
           </div>
         </div>
 
         {/* Right Side: Socials */}
         <div className="flex gap-4">
-          <a href="#" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-[#1A1816] transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-[#1a1412] transition-colors">
             <Phone className="w-4 h-4" />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-[#1A1816] transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-[#1a1412] transition-colors">
             <Camera className="w-4 h-4" />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-[#1A1816] transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-[#1a1412] transition-colors">
             <Mail className="w-4 h-4" />
           </a>
         </div>
